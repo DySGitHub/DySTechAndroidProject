@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/AddReviewHeading"
+        android:id="@+id/AddReviewHeading"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+    <RatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar2"
+        android:layout_below="@+id/ReviewScoreHeading"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ReviewHeading"
+        android:hint="Heading"
+        android:text="@string/ReviewHeading"
+        android:layout_below="@+id/AddReviewHeading"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ReviewMainText"
+        android:hint="Main Text"
+        android:text="@string/ReviewMainText"
+        android:layout_below="@+id/ReviewHeading"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Author"
+        android:id="@+id/ReviewAuthor"
+        android:text="@string/ReviewAuthor"
+        android:layout_below="@+id/ReviewMainText"
+        android:layout_toEndOf="@+id/rDate" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/ReviewScoreHeading"
+        android:id="@+id/ReviewScoreHeading"
+        android:layout_below="@+id/ReviewAuthor"
+        android:layout_centerHorizontal="true" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rDate"
+        android:layout_above="@+id/ReviewSubmitButton"
+        android:layout_toStartOf="@+id/rMonth" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rMonth"
+        android:layout_alignTop="@+id/rDate"
+        android:layout_centerHorizontal="true" />
+
+    <NumberPicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rYear"
+        android:layout_alignTop="@+id/rMonth"
+        android:layout_toEndOf="@+id/rMonth" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ReviewSubmitButton"
+        android:id="@+id/ReviewSubmitButton"
+        android:onClick="SRPressed"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/ReviewPubDate"
+        android:id="@+id/ReviewPubDate"
+        android:layout_above="@+id/rYear"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>
